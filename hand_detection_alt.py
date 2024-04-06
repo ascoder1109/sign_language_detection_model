@@ -5,12 +5,13 @@ import cv2
 import torch
 import time
 
+
     # Load YOLOv5 model
 model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt')
 
 def detect_objects_in_camera():
         # Open camera
-    cap = cv2.VideoCapture(0) #Better to use mobile camera via DroidCam
+    cap = cv2.VideoCapture(1) #Better to use mobile camera via DroidCam
 
     last_detection_time = time.time()
     detected_objects = None  # Initialize detected_objects outside the loop
@@ -58,7 +59,7 @@ def detect_objects_in_camera():
                             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2)  
 
             # Display the frame
-        cv2.imshow('HandSpeak.ai', frame)
+        cv2.imshow('Handspeak.ai', frame)
 
             # Press 'q' to exit
         if cv2.waitKey(1) & 0xFF == ord('q'):
