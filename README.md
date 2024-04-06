@@ -15,6 +15,7 @@ This project implements a real-time object detection system using PyTorch and YO
 * OpenCV
 * NVIDIA CUDA (For faster processing)
 * YOLOv5 (https://github.com/ultralytics/yolov5)
+* Dataset Link(Download YoloV5 PyTorch version) : https://public.roboflow.com/object-detection/american-sign-language-letters/1
 
 ### Collaborators
 
