@@ -7,7 +7,7 @@ import time
 
 
     # Load YOLOv5 model
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt')
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='model/best.pt')
 
 def detect_objects_in_camera():
         # Open camera

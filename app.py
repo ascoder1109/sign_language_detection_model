@@ -9,10 +9,10 @@ import time
 app = Flask(__name__)
 
 # Load YOLOv5 model
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt')
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='model/best.pt')
 
 # Open camera
-cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)  # Adjust camera index as needed (0 or 1)
+cap = cv2.VideoCapture(1)  # Adjust camera index as needed (0 or 1)
 
 last_detection_time = time.time()
 detected_objects = None  # Initialize detected_objects outside the loop
