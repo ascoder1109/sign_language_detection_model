@@ -1,6 +1,7 @@
 # Sign Language Detection Model (handspeak.ai)
 
 
+<img src="assets/handspeak_ai.png" alt_text="CSS" width=450>
 
 This project implements a real-time object detection system using PyTorch and YOLOv5 to identify hand gestures in video streams. It's designed for <b>HandSpeak.ai</b>, a potential communication tool for sign language interpretation.
 
@@ -39,5 +40,3 @@ This project implements a real-time object detection system using PyTorch and YO
 <img src="assets/cuda.png" alt_text="NVIDIA CUDA" width=85>
 <img src="assets/html.png" alt_text="HTML" width=50>
 <img src="assets/css.png" alt_text="CSS" width=50>
-
-<img src="assets/handspeak_ai.png" alt_text="CSS" width=450>
