@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection</title>
+</head>
+<body>
+    <h1>handspeak.ai</h1>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="image" id="imageInput">
+        <button type="button" onclick="uploadImage()">Upload Image</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function uploadImage() {
+            var formData = new FormData();
+            var fileInput = document.getElementById('imageInput').files[0];
+            formData.append('image', fileInput);
+
+            fetch('/detect', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                displayDetectionResults(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        function displayDetectionResults(data) {
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous results
+
+            if (data.detections && data.detections.length > 0) {
+                var detections = data.detections;
+                detections.forEach(obj => {
+                    var label = obj.label;
+                    var confidence = obj.confidence;
+                    var bbox = obj.bbox;
+
+                    var p = document.createElement('p');
+                    p.textContent = `Label: ${label}, Confidence: ${confidence.toFixed(2)}, BBox: [${bbox.join(', ')}]`;
+                    resultDiv.appendChild(p);
+                });
+            } else {
+                var p = document.createElement('p');
+                p.textContent = 'No objects detected';
+                resultDiv.appendChild(p);
+            }
+        }
+    </script>
+</body>
+</html>
