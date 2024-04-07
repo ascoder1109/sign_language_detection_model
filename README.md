@@ -19,6 +19,7 @@ This project implements a real-time object detection system using PyTorch and YO
 * OpenCV
 * NVIDIA CUDA (For faster processing)
 * YOLOv5 (https://github.com/ultralytics/yolov5)
+* Google Colab (For Training Model)
 * Dataset Link(Download YoloV5 PyTorch version) : https://public.roboflow.com/object-detection/american-sign-language-letters/1
 
 ### Collaborators
@@ -38,5 +39,5 @@ This project implements a real-time object detection system using PyTorch and YO
 <img src="assets/flask.png" alt_text="Flask" width=100>
 <img src="assets/opencv.png" alt_text="OpenCV" width=38>
 <img src="assets/cuda.png" alt_text="NVIDIA CUDA" width=85>
-<img src="assets/html.png" alt_text="HTML" width=50>
-<img src="assets/css.png" alt_text="CSS" width=50>
+
+<img src="assets/colab.png" alt_text="Google Colab" width=120>
