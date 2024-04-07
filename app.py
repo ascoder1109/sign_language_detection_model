@@ -16,7 +16,7 @@ model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt')
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 # Open camera
-cap = cv2.VideoCapture(0)  # Adjust camera index as needed (0 or 1)
+cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)  # Adjust camera index as needed (0 or 1)
 
 last_detection_time = time.time()
 detected_objects = None  # Initialize detected_objects outside the loop

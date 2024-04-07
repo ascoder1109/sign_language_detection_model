@@ -1,0 +1,70 @@
+body{
+    overflow-x: hidden;
+    background-color: #212121;
+}
+.Camera{
+    height: 650px;
+    align-items: center;
+    right: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    margin-top: 5%;
+    margin-right: 5%;
+    background-color: #000000;
+}
+.view{
+    width: 100%;
+    padding-left: 25%;
+}
+.display{
+    width: 30%; 
+    height: 100%; 
+    /* min-width: 450px; */
+    margin-left: 5%;
+    margin-right: 3%;
+    margin-bottom: 5%;
+    margin-top: 6%;
+    border-radius: 20px ;
+}
+
+header{
+    width: 100%;
+    /* background-color: #E9F1FA; */
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+.nav{
+    z-index: 9;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+.nav nav .logo{
+    display: flex;
+}
+.nav nav .logo p{
+    margin-left: 5px;
+    font-family: "Varela Round", sans-serif;
+  font-weight: bolder;
+  font-style: normal;
+  color: #BFBFBF;
+}
+.nav nav h1{
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+header .navbar{
+    /* overflow: hidden; */
+    height: 100%;
+}
+header .navbar img{
+    height: 5px;
+    padding: 10%;
+}
+
