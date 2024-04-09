@@ -20,7 +20,7 @@ detected_objects = None  # Initialize detected_objects outside the loop
 def detect_objects(frame):
     global detected_objects, last_detection_time
 
-    if time.time() - last_detection_time >= 0.5 or detected_objects is None:
+    if time.time() - last_detection_time >= 0.3 or detected_objects is None:
         last_detection_time = time.time()
         results = model(frame)
         detected_objects = results.pandas().xyxy[0]
